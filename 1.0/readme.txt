@@ -18,7 +18,7 @@ Live Preview: http://kentothemes.com/items/plugins/kento-pricing-table/
 
 
 
-Plugin Features
+<strong>Plugin Features</strong>
 	
     Unlimited Pricing Table Using easy shortcodes ([wpt id="387"])
     Featured column.(New)
@@ -44,16 +44,26 @@ Plugin Features
 
 After activate plugin you will see WPT menu at left side on wordpress dashboard click "Add New WPT" and fill the options field "Pricing Table Options"
 
-<strong>Themes -></strong> Select Theme style
-<strong>Display Background Image -></strong> select background image for table area
-<strong>Table Column Width -></strong> (number only width or each column)
-<strong>Corner Radius -></strong> (number only to add corner radius of each column)
-<strong>Top And Bottom Gradient -></strong> (gradient color for top and bottom row)
-<strong>Select Style -></strong> (display or hide blank field on pricing table )
-<strong>Table Column Margin -></strong> margin for each column
-<strong>How Many Rows -></strong> (number only) Total Number of row
-<strong>How Many Column -></strong> (Number only) Total number of 
-<strong>Table Data -> </strong> (Table data field to display)
+<strong>Themes -></strong> Select Theme style<br />
+<strong>Display Background Image -></strong> select background image for table area<br />
+<strong>Table Column Width -></strong> (number only width or each column)<br />
+<strong>Corner Radius -></strong> (number only to add corner radius of each column)<br />
+<strong>Top And Bottom Gradient -></strong> (gradient color for top and bottom row)<br />
+<strong>Select Style -></strong> (display or hide blank field on pricing table )<br />
+<strong>Table Column Margin -></strong> margin for each column<br />
+<strong>How Many Rows -></strong> (number only) Total Number of row<br />
+<strong>How Many Column -></strong> (Number only) Total number of column<br /> 
+<strong>Table Data -> </strong> (Table data field to display)<br />
+
+
+<br />
+<strong>How to use on page or post</strong>
+When pricing table data and options setup done please publish KPT as like post or page
+
+and then copy shortcode from top of <strong>Pricing Table Options</strong> `[wpt id="123"]`
+
+then paste this shortcode anywhere in your page to display pricing table
+
 
 
 == Screenshots ==
