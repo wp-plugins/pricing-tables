@@ -19,21 +19,21 @@ Live Preview: http://kentothemes.com/items/plugins/kento-pricing-table/
 
 
 <strong>Plugin Features</strong>
-	
-    Unlimited Pricing Table Using easy shortcodes (`[wpt id="387"]`)
-    Featured column.(New)
-    Hover zoom effect.(New)
-    Custom width for column.
-    Unlimited column color.
-    Unlimited numbers of column & row.
-    Unlimited Background Image for Table area.
-    Hide or display blank field.
-    Top and bottom gradient or flat background.
-    Custom background image for blank field.
-    Table column margin.
-    Different ribbon to column(to mark featured, best, new, save, hot more…).
-    Corner radius for column.
-    Easy Admin Panel.
+
+* Unlimited Pricing Table Using easy shortcodes (`[wpt id="123"]`)
+* Featured column.(New)
+* Hover zoom effect.(New)
+* Custom width for column.
+* Unlimited column color.
+* Unlimited numbers of column & row.
+* Unlimited Background Image for Table area.
+* Hide or display blank field.
+* Top and bottom gradient or flat background.
+* Custom background image for blank field.
+* Table column margin.
+* Different ribbon to column(to mark featured, best, new, save, hot more…).
+* Corner radius for column.
+* Easy Admin Panel.
 
 
 
@@ -57,7 +57,7 @@ After activate plugin you will see WPT menu at left side on wordpress dashboard 
 
 
 <br />
-<strong>How to use on page or post</strong>
+<strong>How to use on page or post</strong><br />
 When pricing table data and options setup done please publish KPT as like post or page
 
 and then copy shortcode from top of <strong>Pricing Table Options</strong> `[wpt id="123"]`
