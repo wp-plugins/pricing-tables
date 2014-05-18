@@ -14,7 +14,7 @@
 
 Wordpress Pricing Table is pure CSS3 and HTML pricing table packs. Easy to use just input data to table and used via shortcodes
 
-Live Preview: http://kentothemes.com/items/plugins/kento-pricing-table/
+Plugin details: http://kentothemes.com/items/plugins/wordpress-pricing-table/
 
 
 
