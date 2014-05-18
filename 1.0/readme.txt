@@ -20,7 +20,7 @@ Live Preview: http://kentothemes.com/items/plugins/kento-pricing-table/
 
 <strong>Plugin Features</strong>
 	
-    Unlimited Pricing Table Using easy shortcodes ([wpt id="387"])
+    Unlimited Pricing Table Using easy shortcodes (`[wpt id="387"]`)
     Featured column.(New)
     Hover zoom effect.(New)
     Custom width for column.
