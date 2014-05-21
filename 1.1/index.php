@@ -1,13 +1,15 @@
 <?php
 /*
+
 Plugin Name: Pricing Tables
 Plugin URI: http://kentothemes.com
 Description: Wordpress Pricing Table is pure CSS3 and HTML pricing table packs. Easy to use just input data to table filed and used via shortcodes.
-Version: 1.0
+Version: 1.1
 Author: KentoThemes
 Author URI: http://kentothemes.com
-License: copyright@kentothemes.com
-License URI: http://kentothemes.com/copyright/
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 */
 
 
@@ -748,8 +750,8 @@ function wpt_display($atts, $content = null ) {
 
 
 $cont ="";
-$cont.= price_table_style($postid);
-$cont.= price_table_body($postid);
+$cont.= wpt_price_table_style($postid);
+$cont.= wpt_price_table_body($postid);
 return $cont;
 
 

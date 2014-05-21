@@ -1,6 +1,6 @@
 <?php
 
-function price_table_body($postid)
+function wpt_price_table_body($postid)
 	{
 		
 		
