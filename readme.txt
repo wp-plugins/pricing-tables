@@ -77,7 +77,7 @@ then paste this shortcode anywhere in your page to display pricing table
 
 == Changelog ==
 
-s
+
 	= 1.1 =
     * 21/05/2014 
 	* Fixed problem on function conflicting.
