@@ -78,7 +78,10 @@ then paste this shortcode anywhere in your page to display pricing table
 == Changelog ==
 
 	= 1.1 =
-    * 21/05/2014 Fixing problem on function conflicting.
+    * 21/05/2014 
+	* Fixed problem on function conflicting.
+	* Fixed Problem javascripts conflicts.
+	
 
 	= 1.0 =
     * 16/05/2014 Initial release.
