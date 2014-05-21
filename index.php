@@ -25,11 +25,7 @@ function wpt_script_pro()
 	wp_enqueue_style('wpt-pro-css-flat', WPT_PLUGIN_PATH.'themes/flat/style.css');
 	wp_enqueue_style('wpt-pro-css-ultra', WPT_PLUGIN_PATH.'themes/ultra/style.css');
 	wp_enqueue_style('wpt-pro-css-monsoon', WPT_PLUGIN_PATH.'themes/monsoon/style.css');	
-		
-	
 	wp_enqueue_style('wpt-pro-css', WPT_PLUGIN_PATH.'css/style.css');
-	wp_enqueue_script('wpt_pro_jquery', plugins_url( '/js/jquery.js' , __FILE__ ) , array( 'jquery' ));	
-	wp_enqueue_script('wpt_pro_TableDnD', plugins_url( '/js/TableDnD.js' , __FILE__ ) , array( 'jquery' ));
 	wp_enqueue_script('wpt_pro_ajax_js', plugins_url( '/js/wpt-ajax.js' , __FILE__ ) , array( 'jquery' ));
 	wp_localize_script( 'wpt_pro_ajax_js', 'wpt_ajax', array( 'wpt_ajaxurl' => admin_url( 'admin-ajax.php')));
 	
@@ -39,6 +35,18 @@ function wpt_script_pro()
 	}
 add_action('init', 'wpt_script_pro');
 add_action('init', 'wpt_register');
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
  
 function wpt_register() {
  
@@ -253,13 +261,6 @@ function meta_boxes_wpt_input( $post ) {
 		</th>
 		<td style="vertical-align:middle;">
         <div id="wpt-total-data">
-        
-<script type="text/javascript">
-jQuery(document).ready(function() {
-  
-    jQuery("#price-table-admin").tableDnD();
-});
-</script>
         
 <?php
 
