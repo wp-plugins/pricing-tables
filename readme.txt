@@ -4,7 +4,7 @@
 	Tags:  free pricing table, price table, pricing table, pricing table plugin, pricing tables, wordpress pricing table
 	Requires at least: 3.8
 	Tested up to: 3.9.1
-	Stable tag: 1.2
+	Stable tag: 1.1
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,14 +77,11 @@ then paste this shortcode anywhere in your page to display pricing table
 
 == Changelog ==
 
-	= 1.2 =
-    * 21/05/2014 
-	* Fixed Problem javascripts conflicts.
-
+s
 	= 1.1 =
     * 21/05/2014 
 	* Fixed problem on function conflicting.
-	
+	* Fixed Problem javascripts conflicts.
 
 	= 1.0 =
     * 16/05/2014 Initial release.
