@@ -1,6 +1,6 @@
 <?php
 
-function price_table_style($postid)
+function wpt_price_table_style($postid)
 	{	
 		$wpt_themes = get_post_meta( $postid, 'wpt_themes', true );
 		

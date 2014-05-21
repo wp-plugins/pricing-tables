@@ -3,8 +3,8 @@
 	Donate link: http://kentothemes.com/donate/
 	Tags:  free pricing table, price table, pricing table, pricing table plugin, pricing tables, wordpress pricing table
 	Requires at least: 3.8
-	Tested up to: 3.9
-	Stable tag: 1.0
+	Tested up to: 3.9.1
+	Stable tag: 1.1
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,26 +14,26 @@
 
 Wordpress Pricing Table is pure CSS3 and HTML pricing table packs. Easy to use just input data to table and used via shortcodes
 
-Live Preview: http://kentothemes.com/items/plugins/kento-pricing-table/
+Plugin details: http://kentothemes.com/items/plugins/wordpress-pricing-table/
 
 
 
 <strong>Plugin Features</strong>
-	
-    Unlimited Pricing Table Using easy shortcodes (`[wpt id="387"]`)
-    Featured column.(New)
-    Hover zoom effect.(New)
-    Custom width for column.
-    Unlimited column color.
-    Unlimited numbers of column & row.
-    Unlimited Background Image for Table area.
-    Hide or display blank field.
-    Top and bottom gradient or flat background.
-    Custom background image for blank field.
-    Table column margin.
-    Different ribbon to column(to mark featured, best, new, save, hot more…).
-    Corner radius for column.
-    Easy Admin Panel.
+
+* Unlimited Pricing Table Using easy shortcodes (`[wpt id="123"]`)
+* Featured column.(New)
+* Hover zoom effect.(New)
+* Custom width for column.
+* Unlimited column color.
+* Unlimited numbers of column & row.
+* Unlimited Background Image for Table area.
+* Hide or display blank field.
+* Top and bottom gradient or flat background.
+* Custom background image for blank field.
+* Table column margin.
+* Different ribbon to column(to mark featured, best, new, save, hot more…).
+* Corner radius for column.
+* Easy Admin Panel.
 
 
 
@@ -57,7 +57,7 @@ After activate plugin you will see WPT menu at left side on wordpress dashboard 
 
 
 <br />
-<strong>How to use on page or post</strong>
+<strong>How to use on page or post</strong><br />
 When pricing table data and options setup done please publish KPT as like post or page
 
 and then copy shortcode from top of <strong>Pricing Table Options</strong> `[wpt id="123"]`
@@ -76,6 +76,9 @@ then paste this shortcode anywhere in your page to display pricing table
 
 
 == Changelog ==
+
+	= 1.1 =
+    * 21/05/2014 Fixing problem on function conflicting.
 
 	= 1.0 =
     * 16/05/2014 Initial release.
