@@ -36,6 +36,10 @@ Plugin details: http://kentothemes.com/items/plugins/wordpress-pricing-table/
 * Easy Admin Panel.
 
 
+<strong>Video Tutorial</strong>
+
+https://www.youtube.com/watch?v=O6YBeh56NEQ
+
 
 == Installation ==
 
