@@ -36,6 +36,10 @@ Plugin details: http://kentothemes.com/items/plugins/wordpress-pricing-table/
 * Easy Admin Panel.
 
 
+<strong>Video Tutorial</strong>
+
+https://www.youtube.com/watch?v=O6YBeh56NEQ
+
 
 == Installation ==
 
@@ -77,7 +81,7 @@ then paste this shortcode anywhere in your page to display pricing table
 
 == Changelog ==
 
-s
+
 	= 1.1 =
     * 21/05/2014 
 	* Fixed problem on function conflicting.

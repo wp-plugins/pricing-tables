@@ -214,8 +214,10 @@ function meta_boxes_wpt_input( $post ) {
                      
 		<label for="default">
 		<input name="wpt_style"   id="default" type="radio" value="style1" <?php if ( $wpt_style=="style1" ) echo "checked"; ?> /><?php echo __('Display Blank Field'); ?></label> <br />
-		<label for="default-top">
-		<input name="wpt_style"   id="default-top" type="radio" value="style2" <?php if ( $wpt_style=="style2" ) echo "checked"; ?> /><?php echo __('Hide Blank Field'); ?></label><span style="display:none" id="default-top-image" class="image-data" data='<?php echo plugins_url( '/demo/default-top.png', __FILE__) ?>'>default-style.png </span>  <br />
+		
+
+        <label for="default-top">
+		<input name="wpt_style" disabled="disabled"  id="default-top" type="radio" value="style2" <?php if ( $wpt_style=="style2" ) echo "checked"; ?> /><?php echo __('Hide Blank Field'); ?></label>  <br />
      
 		</td>
 	</tr>                

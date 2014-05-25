@@ -1,6 +1,10 @@
 jQuery(document).ready(function(jQuery)
 	{		
 	
+	
+	
+
+	
 			jQuery(".wpt-bg-ul li").click(function()
 				{ 	
 					jQuery('.wpt-bg-ul li.bg-selected').removeClass('bg-selected');
