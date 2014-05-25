@@ -39,7 +39,7 @@ If you need more feature for your pricing table then you could try our pro versi
 <h3>Pro Vesrion:</h3><br />
 <strong>Price: $5(USD)</strong><br />
 Plugin Link: <a target="_blank" href="http://kentothemes.com/items/plugins/wordpress-pricing-table/">http://kentothemes.com/items/plugins/wordpress-pricing-table/</a><br /><br /> <br />
-<img src="<?php echo  plugins_url(); ?>/kento-pricing-table-free/css/kento-pricing-table-pro.png" />
+<img src="<?php echo  plugins_url(); ?>/pricing-tables/css/pricing-tables-pro.png" />
 </p>
         
         
