@@ -28,10 +28,10 @@ If you need more feature for your pricing table then you could try our pro versi
 # 7 Days Refund.<br />
 # Easy to use.<br />
 # Four different themes.<br />
-# Hide Blank Field Style. <strong>(Premium Only)</strong><br />
-# Custom font size for column header, price, signup link.<strong>(Premium Only)</strong><br />
-# Custom color for column header, price, signup link.<strong>(Premium Only)</strong><br />
-# Custom height for column header, price, signup.<strong>(Premium Only)</strong><br />
+# Hide Blank Field Style. <strong style="color:#139b50;">(Premium Only)</strong><br />
+# Custom font size for column header, price, signup link.<strong style="color:#139b50;">(Premium Only)</strong><br />
+# Custom color for column header, price, signup link.<strong style="color:#139b50;">(Premium Only)</strong><br />
+# Custom height for column header, price, signup.<strong style="color:#139b50;">(Premium Only)</strong><br />
 # Unlimited Number Pricing Table Using shortcodes.<br />
 # Unlimited column color for each column.<br />
 # Featured Colum And Hover effect.<br />
