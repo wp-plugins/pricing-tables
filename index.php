@@ -4,7 +4,7 @@
 Plugin Name: Pricing Tables
 Plugin URI: http://kentothemes.com/items/plugins/wordpress-pricing-table/
 Description: Wordpress Pricing Table is pure CSS3 and HTML pricing table packs. Easy to use just input data to table filed and used via shortcodes.
-Version: 1.2
+Version: 1.3
 Author: kentothemes
 Author URI: http://kentothemes.com
 License: GPLv2 or later
@@ -113,6 +113,9 @@ function meta_boxes_wpt_input( $post ) {
 
 
 	$wpt_column_width = get_post_meta( $post->ID, 'wpt_column_width', true );
+	
+	if(empty($wpt_column_width)){ $wpt_column_width = 180;}
+	
 	$wpt_row_height = get_post_meta( $post->ID, 'wpt_row_height', true );	
 	$wpt_corner_radius = get_post_meta( $post->ID, 'wpt_corner_radius', true );
 	$wpt_corner_gradient = get_post_meta( $post->ID, 'wpt_corner_gradient', true );	
@@ -122,8 +125,8 @@ function meta_boxes_wpt_input( $post ) {
 	$wpt_total_column = get_post_meta( $post->ID, 'wpt_total_column', true );
 	$wpt_featured_column = get_post_meta( $post->ID, 'wpt_featured_column', true );	
 	
-	if(empty($wpt_total_row)){ $wpt_total_row = 4;}
-	if(empty($wpt_total_column)){ $wpt_total_column = 4;}	
+	if(empty($wpt_total_row)){ $wpt_total_row = 7;}
+	if(empty($wpt_total_column)){ $wpt_total_column = 3;}	
 
 	$wpt_table_field = get_post_meta( $post->ID, 'wpt_table_field', true );
 	$wpt_table_field_header = get_post_meta( $post->ID, 'wpt_table_field_header', true );
@@ -134,6 +137,9 @@ function meta_boxes_wpt_input( $post ) {
 	$wpt_table_column_signup_url = get_post_meta( $post->ID, 'wpt_table_column_signup_url', true );
 	
 	$wpt_table_column_color = get_post_meta( $post->ID, 'wpt_table_column_color', true );
+	if(empty($wpt_table_column_color)){ $wpt_table_column_color = '#2faf7c';}
+	
+	
 	$wpt_bg_img = get_post_meta( $post->ID, 'wpt_bg_img', true );
 	$wpt_themes = get_post_meta( $post->ID, 'wpt_themes', true );	
 	
@@ -157,8 +163,12 @@ function meta_boxes_wpt_input( $post ) {
      	<select name="wpt_themes">
         	<option value="default" <?php if($wpt_themes=='default') echo "selected"; ?> >default</option>
             <option value="flat" <?php if($wpt_themes=='flat') echo "selected"; ?> >flat</option>
-            <option value="ultra" <?php if($wpt_themes=='ultra') echo "selected"; ?>>ultra</option>
-            <option value="monsoon" <?php if($wpt_themes=='monsoon') echo "selected"; ?>>monsoon</option>
+<!-- 
+
+            <option disabled="disabled" value="ultra" <?php if($wpt_themes=='ultra') echo "selected"; ?>>ultra</option>
+            <option disabled="disabled" value="monsoon" <?php if($wpt_themes=='monsoon') echo "selected"; ?>>monsoon</option>
+
+-->
         </select>
 		</td>
 	</tr>
@@ -183,9 +193,6 @@ function meta_boxes_wpt_input( $post ) {
 		</td>
 	</tr> 
 
-
-
-
 	<tr valign="top">
 		<th scope="row"><label for="wpt-column-width"><?php echo __('Table Column Width'); ?>: </label></th>
 		<td style="vertical-align:middle;">                     
@@ -193,42 +200,68 @@ function meta_boxes_wpt_input( $post ) {
 		</td>
 	</tr> 
         
+<!-- 
+
 	<tr valign="top">
 		<th scope="row"><label for="wpt-corner-radius"><?php echo __('Corner Radius'); ?>: </label></th>
 		<td style="vertical-align:middle;">                     
-                     <input required="required" size='10' name='wpt_corner_radius' class='wpt-corner-radius' id='wpt-corner-radius' type='text' value='<?php if ( isset( $wpt_corner_radius ) ) echo $wpt_corner_radius; ?>' />px<br />
-                     <span class="wpt-shortcode-hint">Set zero(0) for no corner radius </span>
+                     <input required="required" size='10' name='wpt_corner_radius' class='wpt-corner-radius' id='wpt-corner-radius' type='text' value='<?php if ( !empty( $wpt_corner_radius ) ) echo $wpt_corner_radius; else echo "0"; ?>' />px<br /><span class="wpt-shortcode-hint">Set zero(0) for no corner radius</span>
 		</td>
 	</tr>  
-           
+
+
 	<tr valign="top">
 		<th scope="row"><label for="wpt-corner-gradient"><?php echo __('Top And Bottom Gradient'); ?>: </label></th>
 		<td style="vertical-align:middle;">                     
                      <input size='10' name='wpt_corner_gradient' class='wpt-corner-gradient' id='wpt-corner-gradient' type='range' min="0" max="100" step="1.00" value='<?php if ( isset( $wpt_corner_gradient ) ) echo $wpt_corner_gradient; ?>' /><span id="wpt-corner-gradient-value"></span>
 		</td>
-	</tr>  
+	</tr> 
+
+
+-->
+           
+ 
                 
 	<tr valign="top">
 		<th scope="row"><label for="wpt-style"><?php echo __('Select Style'); ?>: </label></th>
 		<td style="vertical-align:middle;">
                      
 		<label for="default">
-		<input name="wpt_style"   id="default" type="radio" value="style1" <?php if ( $wpt_style=="style1" ) echo "checked"; ?> /><?php echo __('Display Blank Field'); ?></label> <br />
+		<input name="wpt_style"   id="default" type="radio" value="style1" checked="checked" /><?php echo __('Display Blank Field'); ?></label> <br />
 		
 
+<!--
+
         <label for="default-top">
-		<input name="wpt_style" disabled="disabled"  id="default-top" type="radio" value="style2" <?php if ( $wpt_style=="style2" ) echo "checked"; ?> /><?php echo __('Hide Blank Field'); ?></label>  <br />
+		<input name="wpt_style" disabled="disabled"  id="default-top" type="radio" value="style2" <?php if ( $wpt_style=="style2" ) echo "checked"; ?> /><?php echo __('Hide Blank Field'); ?></label><strong></strong><br />
+
+
+ -->
      
 		</td>
 	</tr>                
 
+
+	<tr valign="top">
+		<th scope="row"><label for="wpt-table-column-color"><?php echo __('Column Background color'); ?>: </label></th>
+		<td style="vertical-align:middle;">
+                           	 <input size='10' name='wpt_table_column_color' class='wpt-table-column-color' id="wpt-table-column-color" type='text' value='<?php echo $wpt_table_column_color; ?>' /><br />
+
+		</td>
+	</tr>
+
+
+
+
+<!--
 	<tr valign="top">
 		<th scope="row"><label for="wpt-column-margin"><?php echo __('Table Column Margin'); ?>: </label></th>
 		<td style="vertical-align:middle;">                     
-                     <input required="required" size='10' name='wpt_column_margin' class='wpt-column-margin' id="wpt-column-margin" type='text' value='<?php echo sanitize_text_field($wpt_column_margin) ?>' />px<br />
+                     <input required="required" disabled="disabled" size='10' name='wpt_column_margin' class='wpt-column-margin' id="wpt-column-margin" type='text' value='<?php echo sanitize_text_field($wpt_column_margin) ?>' />px<br />
                      <span class="wpt-shortcode-hint">Set zero(0) for no column margin </span>
 		</td>
-	</tr> 
+	</tr>
+ --> 
               
 	<tr valign="top">
 		<th scope="row"><label for="wpt-total-row"><?php echo __('How Many Rows'); ?>: </label></th>
@@ -312,9 +345,9 @@ for($j=1; $j<=$wpt_total_row; $j++)
                          <?php } 
 						 
 						 
-                        if(empty($wpt_table_column_color[$i]))
+                        if(empty($wpt_table_column_color))
 							{
-								$wpt_table_column_color[$i] ="";
+								$wpt_table_column_color ="";
 							}
 							
                         if(empty($wpt_featured_column))
@@ -324,11 +357,7 @@ for($j=1; $j<=$wpt_total_row; $j++)
 							
 
 						 ?>
-                    
-                    
-                    
-                    	 <input size='10' name='wpt_table_column_color[<?php echo $i; ?>]' class='wpt-table-column-color' id="wpt-table-column-color" type='text' value='<?php echo $wpt_table_column_color[$i]; ?>' /><br />
-                         
+
                          
                          <br />
 						<label for="wpt-featured-column[<?php echo $i; ?>]">
@@ -526,7 +555,7 @@ function meta_boxes_wpt_save( $post_id ) {
 	$wpt_table_field_header = stripslashes_deep( $_POST['wpt_table_field_header'] );
 	$wpt_table_field_price = stripslashes_deep( $_POST['wpt_table_field_price'] );
 	
-	$wpt_table_column_color = stripslashes_deep( $_POST['wpt_table_column_color'] );	
+	$wpt_table_column_color = sanitize_text_field( $_POST['wpt_table_column_color'] );	
 	$wpt_table_column_ribon = stripslashes_deep( $_POST['wpt_table_column_ribon'] );
 	$wpt_table_column_signup_text = stripslashes_deep( $_POST['wpt_table_column_signup_text'] );	
 	$wpt_table_column_signup_url = stripslashes_deep( $_POST['wpt_table_column_signup_url'] );
@@ -609,13 +638,6 @@ for($j=1; $j<=$wpt_total_row; $j++)
 					echo "<td>";
 					
 					?>
-                    	<?php
-                        if(empty($wpt_table_column_color[$i]))
-							{
-								$wpt_table_column_color[$i] ="";
-							}
-
-						?>
                         
                         
                          <?php if($i==1) { 
@@ -628,8 +650,7 @@ for($j=1; $j<=$wpt_total_row; $j++)
 						 ?>
                     	 <input size='10' placeholder='Height of this Row, ex:30px' name='wpt_row_height[<?php echo $i; ?>]' class='wpt-row-height' id="wpt-row-height" type='text' value='<?php echo $wpt_row_height[$i]; ?>' /><br />                         
                          <?php } ?>                        
-                        
-                    	 <input size='10' name='wpt_table_column_color[<?php echo $i; ?>]' class='wpt-table-column-color' id="wpt-table-column-color" type='text' value='<?php echo $wpt_table_column_color[$i]; ?>' /><br />
+
                          
                          
                          

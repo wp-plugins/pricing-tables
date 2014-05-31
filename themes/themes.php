@@ -6,17 +6,16 @@ function wpt_price_table_style($postid)
 		
 		$wpt_column_width = get_post_meta( $postid, 'wpt_column_width', true );
 		$wpt_row_height = get_post_meta( $postid, 'wpt_row_height', true );
-		$wpt_corner_radius = get_post_meta( $postid, 'wpt_corner_radius', true );
-		$wpt_corner_gradient = get_post_meta( $postid, 'wpt_corner_gradient', true );	
+		$wpt_corner_radius = 0; //get_post_meta( $postid, 'wpt_corner_radius', true ); //for free version	
+		$wpt_corner_gradient = 0; //get_post_meta( $postid, 'wpt_corner_gradient', true ); //  for free version	
 		$wpt_table_column_color = get_post_meta( $postid, 'wpt_table_column_color', true );
 		$wpt_total_column = get_post_meta( $postid, 'wpt_total_column', true );
 		$wpt_bg_img = get_post_meta( $postid, 'wpt_bg_img', true );
 		$wpt_themes = get_post_meta( $postid, 'wpt_themes', true );		
 		$wpt_featured_column = get_post_meta( $postid, 'wpt_featured_column', true );
-		$wpt_column_margin = get_post_meta( $postid, 'wpt_column_margin', true );		
+		$wpt_column_margin = 10; // get_post_meta( $postid, 'wpt_column_margin', true ); //for free version		
 
-	
-	
+
 		if($wpt_themes=="default")
 			{	
 		echo "<style type='text/css'>";
@@ -83,29 +82,29 @@ function wpt_price_table_style($postid)
 					border-bottom-right-radius: ".$wpt_corner_radius."px;
 					}";			
 				
-		if(!empty($wpt_table_column_color[$j]))
+		if(!empty($wpt_table_column_color))
 		{
 			echo "
 				.price-table-main.default .table-column-".$j." li:first-child
 					{
-					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%) !important;
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color)." !important;
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%) !important;
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.default .table-column-".$j." li:last-child
 					{
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.default .table-column-".$j." li:nth-child(2)
-					{background-color: ".$wpt_table_column_color[$j]." !important;}
+					{background-color: ".$wpt_table_column_color." !important;}
 				.price-table-main.default .table-column-".$j." li:last-child div a
-					{background-color: ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;}";
+					{background-color: ".wpt_style_dark_color($wpt_table_column_color)." !important;}";
 		}			
 	else
 		{
@@ -218,32 +217,32 @@ function wpt_price_table_style($postid)
 					border-bottom-right-radius: ".$wpt_corner_radius."px;
 					}";			
 				
-		if(!empty($wpt_table_column_color[$j]))
+		if(!empty($wpt_table_column_color))
 		{
 			echo "
 				.price-table-main.flat .table-column-".$j." li:first-child
 					{
-					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%) !important;
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color)." !important;
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%) !important;
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.flat .table-column-".$j." li:last-child
 					{
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.flat .table-column-".$j." li:nth-child(2)
-					{background-color: ".$wpt_table_column_color[$j]." !important;}
+					{background-color: ".$wpt_table_column_color." !important;}
 					
 				.price-table-main.flat .table-column-".$j." li:nth-child(2) .price
-					{background-color: ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;}					
+					{background-color: ".wpt_style_dark_color($wpt_table_column_color)." !important;}					
 				.price-table-main.flat .table-column-".$j." li:last-child div a
-					{background-color: ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;}";
+					{background-color: ".wpt_style_dark_color($wpt_table_column_color)." !important;}";
 		}			
 	else
 		{
@@ -360,32 +359,32 @@ echo "<style type='text/css'>";
 					border-bottom-right-radius: ".$wpt_corner_radius."px;
 					}";			
 				
-		if(!empty($wpt_table_column_color[$j]))
+		if(!empty($wpt_table_column_color))
 		{
 			echo "
 				.price-table-main.ultra .table-column-".$j." li:first-child
 					{
-					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%) !important;
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color)." !important;
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%) !important;
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.ultra .table-column-".$j." li:last-child
 					{
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.ultra .table-column-".$j." li:nth-child(2)
-					{background-color: ".$wpt_table_column_color[$j]." !important;}
+					{background-color: ".$wpt_table_column_color." !important;}
 					
 				.price-table-main.ultra .table-column-".$j." li:nth-child(2) .price
-					{background-color: ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;}					
+					{background-color: ".wpt_style_dark_color($wpt_table_column_color)." !important;}					
 				.price-table-main.ultra .table-column-".$j." li:last-child div a
-					{background-color: ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;}";
+					{background-color: ".wpt_style_dark_color($wpt_table_column_color)." !important;}";
 		}			
 	else
 		{
@@ -498,29 +497,29 @@ echo "<style type='text/css'>";
 					border-bottom-right-radius: ".$wpt_corner_radius."px;
 					}";			
 				
-		if(!empty($wpt_table_column_color[$j]))
+		if(!empty($wpt_table_column_color))
 		{
 			echo "
 				.price-table-main.monsoon .table-column-".$j." li:first-child
 					{
-					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%) !important;
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					border-bottom: 1px solid ".wpt_style_dark_color($wpt_table_column_color)." !important;
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%) !important;
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.monsoon .table-column-".$j." li:last-child
 					{
-					background: ".$wpt_table_column_color[$j].";
-					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
-					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color[$j])." 0%, ".$wpt_table_column_color[$j]." ".$wpt_corner_gradient."%);
+					background: ".$wpt_table_column_color.";
+					background: -moz-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: -webkit-linear-gradient(bottom, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
+					background: linear-gradient(to top, ".wpt_style_dark_color($wpt_table_column_color)." 0%, ".$wpt_table_column_color." ".$wpt_corner_gradient."%);
 					}
 				.price-table-main.monsoon .table-column-".$j." li:nth-child(2)
-					{background-color: ".$wpt_table_column_color[$j]." !important;}
+					{background-color: ".$wpt_table_column_color." !important;}
 				.price-table-main.monsoon .table-column-".$j." li:last-child div a
-					{background-color: ".wpt_style_dark_color($wpt_table_column_color[$j])." !important;}";
+					{background-color: ".wpt_style_dark_color($wpt_table_column_color)." !important;}";
 		}			
 	else
 		{

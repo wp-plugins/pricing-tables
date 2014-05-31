@@ -7,7 +7,7 @@ function wpt_price_table_body($postid)
 			$wpt_row_height = get_post_meta( $postid, 'wpt_row_height', true );					
 			$wpt_column_width = get_post_meta( $postid, 'wpt_column_width', true );			
 			$wpt_corner_radius = get_post_meta( $postid, 'wpt_corner_radius', true );
-			$wpt_style = get_post_meta( $postid, 'wpt_style', true );
+			$wpt_style = 'style1'; //get_post_meta( $postid, 'wpt_style', true );
 			$wpt_total_row = get_post_meta( $postid, 'wpt_total_row', true );
 			$wpt_total_column = get_post_meta( $postid, 'wpt_total_column', true );
 			$wpt_table_field = get_post_meta( $postid, 'wpt_table_field', true );
