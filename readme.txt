@@ -1,10 +1,10 @@
 === Pricing Tables ===
 	Contributors: kentothemes
 	Donate link: http://kentothemes.com/donate/
-	Tags:  free pricing table, price table, pricing table, pricing table plugin, pricing tables, wordpress pricing table
+	Tags:  free pricing table, price table, pricing table, pricing table plugin, pricing tables, wordpress pricing table, pricing, pricing plugin, pricing grid, price grid
 	Requires at least: 3.8
 	Tested up to: 3.9.1
-	Stable tag: 1.3
+	Stable tag: 1.4
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,39 +12,38 @@
 
 == Description ==
 
-Wordpress Pricing Table is pure CSS3 and HTML pricing table packs. Easy to use just input data to table and used via shortcodes
+Pricing Tables is one of best and smart looking free pricing plugin for wordpress, easy to use and customize to display anywhere in your wordpress site page or post or via php code by shortcode. its pure CSS3 and HTML pricing table packs.
 
-Plugin details: http://kentothemes.com/items/plugins/wordpress-pricing-table/
+you can control column width and color to match your current themes and website color as well as another great feature to add background image for pricing table area and you could add your own background image via image file link.
+
 
 
 
 <strong>Plugin Features</strong>
 
 * Unlimited Pricing Table Using easy shortcodes (`[wpt id="123"]`)
-* Featured column.(New)
-* Hover zoom effect.(New)
+* Featured column.
+* Hover zoom effect.
 * Custom width for column.
 * Unlimited column color.
 * Unlimited numbers of column & row.
-* Unlimited Background Image for Table area.
-* Hide or display blank field.
+* Unlimited Background Image for Table area, use your own.
 * Top and bottom gradient or flat background.
 * Custom background image for blank field.
 * Table column margin.
+* Tooltip text.
 * Different ribbon to column(to mark featured, best, new, save, hot more…).
 * Corner radius for column.
 * Easy Admin Panel.
 
 
-<strong>Video Tutorial</strong>
-
-https://www.youtube.com/watch?v=O6YBeh56NEQ
-
+<strong>Premium version available for this plugin</strong>
+http://kentothemes.com/items/plugins/wordpress-pricing-table/
 
 == Installation ==
 
 1. Install as regular WordPress plugin.
-2. Go your Pluings setting via WordPress Dashboard and activate it.
+2. Go your plugin setting via WordPress Dashboard and activate it.
 
 After activate plugin you will see WPT menu at left side on wordpress dashboard click "Add New WPT" and fill the options field "Pricing Table Options"
 
@@ -69,6 +68,11 @@ and then copy shortcode from top of <strong>Pricing Table Options</strong> `[wpt
 then paste this shortcode anywhere in your page to display pricing table
 
 
+<strong>Video Tutorial</strong>
+
+https://www.youtube.com/watch?v=O6YBeh56NEQ
+
+
 
 == Screenshots ==
 
@@ -81,7 +85,9 @@ then paste this shortcode anywhere in your page to display pricing table
 
 == Changelog ==
 
-
+	= 1.4 =
+    * 25/05/2014 
+	* Reset option added Featured column.
 
 	= 1.3 =
     * 25/05/2014 
