@@ -34,10 +34,6 @@ Please report any issue via our support forum <a href="http://kentothemes.com/qu
  </td>
 <td width="100px"> 
 
-
-
-
-
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://kentothemes.com/items/plugins/wordpress-pricing-table/" data-text=" WordPress Pricing Tables">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </td>
@@ -74,7 +70,7 @@ If you need more feature for your pricing table then you could try our pro versi
 # Featured Colum And Hover effect.<br />
 <br /><br />
 <h3>Pro Vesrion:</h3><br />
-<strong>Price: $5(USD)</strong><br />
+<strong style="font-size:30px;">Price: $5(USD)</strong><br />
 Plugin Link: <a target="_blank" href="http://kentothemes.com/items/plugins/wordpress-pricing-table/">http://kentothemes.com/items/plugins/wordpress-pricing-table/</a><br /><br /> <br />
 <img src="<?php echo  plugins_url(); ?>/pricing-tables/css/pricing-tables-pro.png" />
 </p>

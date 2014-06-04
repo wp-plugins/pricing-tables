@@ -4,7 +4,7 @@
 Plugin Name: Pricing Tables
 Plugin URI: http://kentothemes.com/items/plugins/wordpress-pricing-table/
 Description: Wordpress Pricing Table is pure CSS3 and HTML pricing table packs. Easy to use just input data to table filed and used via shortcodes.
-Version: 1.3
+Version: 1.4
 Author: kentothemes
 Author URI: http://kentothemes.com
 License: GPLv2 or later
@@ -361,12 +361,20 @@ for($j=1; $j<=$wpt_total_row; $j++)
                          
                          <br />
 						<label for="wpt-featured-column[<?php echo $i; ?>]">
-                           <input type="radio" name="wpt_featured_column" id="wpt-featured-column[<?php echo $i; ?>]" value="<?php echo $i; ?>" <?php if ( $wpt_featured_column==$i ) echo "checked"; ?>  />
-                           Featured
+                           <input type="radio" class="wpt_featured_column" name="wpt_featured_column" id="wpt-featured-column[<?php echo $i; ?>]" value="<?php echo $i; ?>" <?php if ( $wpt_featured_column==$i ) echo "checked"; ?>  />
+                           Featured 
                            </label>
+                           
+                           <?php if ( $wpt_featured_column==$i ) echo "<span class='wpt_featured_column_reset' style='font-size:10px;color: #FF0000;cursor: pointer;'>Reset</span>"; ?>
                            <br /><br />
                          
-                         
+                         <script>
+						 		jQuery(".wpt_featured_column_reset").click(function()
+									{
+										jQuery('.wpt_featured_column').attr('checked', false);
+										
+										})
+						 </script>
                          
                          
                          
