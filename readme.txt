@@ -86,7 +86,7 @@ https://www.youtube.com/watch?v=O6YBeh56NEQ
 == Changelog ==
 
 	= 1.4 =
-    * 25/05/2014 
+    * 04/06/2014 
 	* Reset option added Featured column.
 
 	= 1.3 =
