@@ -16,7 +16,11 @@ Pricing Tables is one of best and smart looking free pricing plugin for wordpres
 
 you can control column width and color to match your current themes and website color as well as another great feature to add background image for pricing table area and you could add your own background image via image file link.
 
+<strong><a href="http://kentothemes.com/question_answers/">Details and Support</a></strong>
 
+<strong><a href="http://kentothemes.com/items/plugins/kento-pricing-table-pro/">Premium Version Available</a></strong>
+
+<strong><a href="http://kentothemes.com">Live Preview</a></strong>
 
 
 <strong>Plugin Features</strong>
@@ -37,8 +41,8 @@ you can control column width and color to match your current themes and website 
 * Easy Admin Panel.
 
 
-<strong>Premium version available for this plugin</strong>
-http://kentothemes.com/items/plugins/wordpress-pricing-table/
+<strong><a href="http://kentothemes.com/items/plugins/kento-pricing-table-pro/">Premium Version Available</a></strong>
+
 
 == Installation ==
 
